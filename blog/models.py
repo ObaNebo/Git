@@ -1,21 +1,14 @@
 from django.db import models
 
-class Operation(models.Model):
 
-    name = models.TextField(
-        verbose_name = "Наименование операции",
-    )
-    description = models.TextField(
-        blank=True,
-        null=True,
-        verbose_name="Описание операции",
-    )
-    cost = models.FloatField(
-        verbose_name="Стоимость",
-    )
+class Task(models.Model):
+    title = models.CharField("Название задачи", max_length=200)
+    task = models.TextField("Описание задачи")
+
     class Meta:
-        verbose_name = "Операция"
-        verbose_name_plural = "Операции"
-    
-    def __str__(self):
-        return f"{self.name}"
+        verbose_name = "Задача"
+        verbose_name_plural = "Задачи"
+
+    def _str_(self):
+        return self.title
+
