@@ -16,14 +16,14 @@
 
 
         <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
-          <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="{% url 'index' %}">Панель управления</a>
-          <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="{% url 'about' %}">О нас</a>
-          <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="{% url 'autor' %}">Автор</a>
-          <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="{% url 'create' %}">Создать задачу</a>
+          <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="{% url 'dashboard' %}">Главная страница</a>
+          <!-- <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="{% url 'about' %}">О нас</a>
+          <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="{% url 'autor' %}">Автор</a> -->
+          <!-- <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="{% url 'create' %}">Создать задачу</a> -->
         </nav>
       </div>
       <div class="container">
-        <h1>{% block content %}Панель управления{% endblock content %}</h1>
+        <h1>{% block content %}Главная страница{% endblock content %}</h1>
       </div>
 </body>
 </html>
