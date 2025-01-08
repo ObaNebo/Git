@@ -12,11 +12,13 @@
                 <h2>{{ task.title }}</h2>
                 <p>{{ task.task }}</p>
                 <a href="{% url 'edit_task' task.pk %}" class="btn btn-custom btn-outline-primary-custom">✏️ Редактировать</a>
+                <a href="{% url 'delete_task' task.pk %}" class="btn btn-custom btn-outline-primary-custom">🗑️ Удалить</a>
             </div>
         {% endfor %}
     {% else %}
         <p>Задач нет</p>
     {% endif %}
 
+  
 
 {% endblock content %}
