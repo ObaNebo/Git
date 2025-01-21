@@ -1,0 +1,25 @@
+{% extends 'dashboard/base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock title %}
+
+{% block content %}
+    {% if user.is_authenticated%}
+        {% if tasks %}
+            {% for task in tasks %}
+                <div class="card mb-3 shadow-sm border-1 rounded">
+                    <h2>{{ task.title }}</h2>
+                    <p>{{ task.task }}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>Задач нет</p>
+        {% endif %}
+
+    {% else %}
+        <h4>Главная страница</h4>
+        <h2>Добро пожаловать в АД муагага</h2>
+        <h2>Регнись и начнем веселье</h2>
+    {% endif %}
+{% endblock content %}
